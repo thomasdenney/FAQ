@@ -56,7 +56,9 @@ Yes. Opacity and Opacity Express are some cheaper alternatives that also export 
 
 ###Should I use AppCode or Xcode?
 
-For most developers, Xcode is a fantastic IDE and the vast majority of iOS and OSX developers use it as their primary IDE. The benefit of Xcode is that it gets all the new features - such as the SpriteKit scene editor, Swift support, etc - straight away, whereas AppCode and other apps take longer to get new features. That said, AppCode does offer some fantastic and unique features.
+For most developers, Xcode is a fantastic IDE and the vast majority of iOS and OSX developers use it as their primary IDE. The benefit of Xcode is that it gets all the new features - such as the SpriteKit scene editor, Swift support, etc - straight away, whereas AppCode and other apps take longer to get new features. 
+
+That said, AppCode does offer some fantastic features for code inspection and refactoring that are - in a word - superior to Xcode's. But if you are starting - you are better of with Xcode.
 
 ##SDK
 
@@ -72,9 +74,10 @@ No, you can alternatively use XIB files or generate your user interface in code.
 
 ###What should I use to store my app's data?
 
-* **Core Data**. A really easy to use managed object graph based on top of SQLite. For most apps this is the best solution because you are able to take advantage of `NSFetchedResultsController` to make your table and collection views really slick and update automatically. Unlike other technologies Core Data has a very strict [concurrency model](https://developer.apple.com/library/ios/documentation/cocoa/Conceptual/CoreData/Articles/cdConcurrency.html), which you need to know about before you get started
-* **FMDB/SQLite**. If you aren't going to directly use Core Data then using SQLite is your next best bet. If you're on iOS, the best way to interact with SQLite is through [FMDB](https://github.com/ccgus/fmdb). Instead of letting Core Data manage your model objects you can create your own model objects from the results of SQL queries. This means that you can use your own concurrency model (although FMDatabaseQueue is a super easy solution to thread safety). If you're interested in something somewhere between FMDB and Core Data you might want to try Marco Arment's [FCModel](https://github.com/marcoarment/FCModel), which is based off of Brent Simmons' description of [how he uses FMDB](http://www.objc.io/issue-4/SQLite-instead-of-core-data.html)
-* **NSUserDefaults**. Don't store your object graph in NSUserDefaults, as this is a simple key-value store that is great for storing settings. Do not store sensitive data such as credentials, OAuth tokens or in-app purchase receipts on NSUserDefaults - use [Keychain](https://developer.apple.com/library/ios/documentation/Security/Conceptual/keychainServConcepts/02concepts/concepts.html) for this instead
+* **Plist files**. If you are storing small amounts of non-complex data structures use plist files. Array and dictionary collection classes as well as NSData support writing to files with a single line of code.
+* **Core Data**. A really easy to use managed object graph based on top of SQLite. For most apps this is the best solution because you are able to take advantage of `NSFetchedResultsController` to make your table and collection views really slick and update automatically. Unlike other technologies Core Data has a very strict [concurrency model](https://developer.apple.com/library/ios/documentation/cocoa/Conceptual/CoreData/Articles/cdConcurrency.html), which you need to know about before you get started.
+* **FMDB/SQLite**. If you aren't going to directly use Core Data then using SQLite is your next best bet. If you're on iOS, the best way to interact with SQLite is through [FMDB](https://github.com/ccgus/fmdb). Instead of letting Core Data manage your model objects you can create your own model objects from the results of SQL queries. This means that you can use your own concurrency model (although FMDatabaseQueue is a super easy solution to thread safety). If you're interested in something somewhere between FMDB and Core Data you might want to try Marco Arment's [FCModel](https://github.com/marcoarment/FCModel), which is based off of Brent Simmons' description of [how he uses FMDB](http://www.objc.io/issue-4/SQLite-instead-of-core-data.html).
+* **NSUserDefaults**. Don't store your object graph in NSUserDefaults, as this is a simple key-value store that is great for storing settings. Do not store sensitive data such as credentials, OAuth tokens or in-app purchase receipts on NSUserDefaults - use [Keychain](https://developer.apple.com/library/ios/documentation/Security/Conceptual/keychainServConcepts/02concepts/concepts.html) for this instead.
 
 ###What frameworks should I use for my game?
 
@@ -131,7 +134,7 @@ Yes, with [RubyMotion](http://www.rubymotion.com).
 
 ###Can I write an iOS app in Java?
 
-Yes, sort of with [XMLVM](http://www.xmlvm.org/iphone/). But please don't.
+Yes, with [XMLVM](http://www.xmlvm.org/iphone/).
 
 ###Can I write an iOS app in Python?
 
@@ -151,7 +154,7 @@ If you are targeting multiple platforms or the majority of your app's code is 'b
 
 ###Why does Foundation classes start with NS?
 
-Objective-C doesn't support namespaces, so all classes are prefixed with the framework or developer abbreviation. NS = NextStep, which is the company that Apple bought in the 90s and was used to develop OSX and iOS. For your own classes Apple recommends that you use your own three letter prefix, especially if you publish the code.
+Objective-C doesn't support namespaces, so all classes are prefixed with the framework or developer abbreviation. NS = NextStep, which is the company that Apple bought in the 90s and was used to develop OSX and iOS. For your own classes Apple recommends that you use your own [two or three](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CodingGuidelines/Articles/NamingBasics.html#//apple_ref/doc/uid/20001281-1002226-BBCJECED) letters prefix, especially if you publish the code.
 
 ##Cloud and Web
 
@@ -181,7 +184,7 @@ For most developers the answer is probably not. There are three main reasons to 
 
 ###What apps are good for UI design?
 
-Most vector or image edidotrs are OK. [Photoshop](http://www.photoshop.com), [Pixelmator](http://pixelmator.com), [Sketch](http://bohemiancoding.com/sketch/) and [Opacity](http://likethought.com/opacity/) are all great options on the Mac. You may also like to try Facebook's [Origami](http://facebook.github.io/origami/) for interaction design.
+Most vector or image editors are OK. [Photoshop](http://www.photoshop.com), [Pixelmator](http://pixelmator.com), [Sketch](http://bohemiancoding.com/sketch/) and [Opacity](http://likethought.com/opacity/) are all great options on the Mac. You may also like to try Facebook's [Origami](http://facebook.github.io/origami/) for interaction design.
 
 ###Any good design guides or blogs?
 
@@ -190,8 +193,8 @@ The [Human Interface Guidelines](https://developer.apple.com/library/prerelease/
 ###Any tips for good design?
 
 * Justify every pixel of your UI - is a control essential for most people? 
-* Is this interaction obvious? A lot of apps use really interesting combinations of swipes, pinches and taps but make sure that your users will know how to use them
-* Use AutoLayout and prepare for size classes. Apple wasn't even remotely subtle at WWDC '14 that AutoLayout is designed to work for multiple screen sizes and classes...
+* Is this interaction obvious? A lot of apps use really interesting combinations of swipes, pinches and taps but make sure that your users will know how to use them.
+* Use AutoLayout and prepare for size classes. Apple wasn't even remotely subtle at WWDC '14 that AutoLayout is designed to work for multiple screen sizes and classes.
 
 ##Community
 
@@ -199,7 +202,7 @@ The [Human Interface Guidelines](https://developer.apple.com/library/prerelease/
 
 * [NSHipster](http://nshipster.com)
 * [objc.io](http://objc.io)
-* [Swift](http://www.apple.com/legal/internet-services/itunes/appstorenotices/)
+* [Swift](https://developer.apple.com/swift/blog/)
 * [Ash Furrow](http://ashfurrow.com)
 * [Brent Simmons](http://inessential.com)
 * [NSBlog (Mike Ash)](https://mikeash.com/pyblog/)
@@ -240,7 +243,7 @@ The [Human Interface Guidelines](https://developer.apple.com/library/prerelease/
 
 ###Where can I find great third party code?
 
-[CocoaPods](http://cocoapods.org). CocoaPods is a tool used by iOS developers that makes it really easy to integrate open source code into your iOS app. Several sites, such as [Cocoa Controls](https://www.cocoacontrols.com/platforms/ios/controls?cocoapods=t) keep track of these. 
+[CocoaPods](http://cocoapods.org). CocoaPods is a dependency manager used by Apple developers that makes it really easy to integrate open source code into your iOS or OSX app. Several sites, such as [Cocoa Controls](https://www.cocoacontrols.com/platforms/ios/controls?cocoapods=t) keep track of these. 
 
 ###Should I use CocoaPods/third party code?
 
@@ -248,7 +251,9 @@ The answer for most people is yes. The vast majority of CocoaPods are licensed u
 
 ###Any great CocoaPods that I should know about?
 
-* [AFNetworking](http://github.com/AFNetworking/AFNetworking)
+* [AFNetworking](http://github.com/AFNetworking/AFNetworking) - library that handles all your networking needs
+* [GSKeychain](https://github.com/goosoftware/GSKeychain) - very simple interface for handling keychain operations
+* [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa) - functional reactive programming library for Cocoa.
 * **To be continued...**
 
 ##The App Store
