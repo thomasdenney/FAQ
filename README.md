@@ -2,6 +2,7 @@
 
 This FAQ originated because I noticed a lot of questions were getting repeated on [/r/iosprogramming](http://reddit.com/r/iosprogramming) so I've decided to write short and sweet answers to all the common questions here. This is a curated list, and I am actively looking for contributions for both questions and answers, so please submit pull requests.
 
+* [Basics](#basics)
 * [Prerequisites](#prerequisites)
 * [Tools](#tools)
 * [SDK](#sdk)
@@ -13,6 +14,10 @@ This FAQ originated because I noticed a lot of questions were getting repeated o
 * [Third party code](#third-party-code)
 * [The App Store](#the-app-store)
 * [Contracting](#contracting)
+
+##Basics
+
+The most valuable source of information available to iOS Developers is [Apple's Developer Library](https://developer.apple.com/library/ios/navigation/). This contains thousands of documents explaining every single function in the SDK, hundreds of sample applications and several years of WWDC videos. If you've got a problem, this should always be the first place that you should look. 
 
 ##Prerequisites
 
