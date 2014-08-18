@@ -107,6 +107,8 @@ No, you can alternatively use XIB files or generate your user interface in code.
 
 No. Currently around 90% of all iOS devices are on iOS 7, and by next spring it will be a similar figure for iOS 8. You'll miss out on using the latest APIs and you'll likely have to write a lot of additional code in order to properly support iOS 6. The only major reason to support versions earlier than iOS 7 is if you are developing for a specific audience (such as schools) that may have older devices (such as the iPad 1).
 
+Here's a [great list of stats about iOS versions](http://david-smith.org/iosversionstats/).
+
 ##Common tasks
 
 ###How can I change my apps' font?
