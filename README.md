@@ -125,6 +125,8 @@ Neither does mine. PSPDFKit has a [fix for it though](http://petersteinberger.co
 
 In general, the programming language you work in is only half of the challenge of learning to build an app. The other, more important half, is the frameworks. Often it is easiest to learn to build an app in Objective-C because the vast majority of documentation, tutorials and support are currently written for Objective-C. Therefore it is often easier to learn the basics with Objective-C before applying them in the language of your choice.
 
+If you're considering a non-Apple language (i.e. not Objective-C or Swift), you probably need to consider that the learning curve will be greater, even if you're already familiar with the language. This is because you will have to learn Cocoa Touch, the framework, as well as the various patterns that it uses. These patterns (delegation, for example) may not be familiar in your language of choice, so you will have to adapt to using them whereas they will come more naturally if you learn them in Objective-C or Swift.
+
 ###Should I learn Objective-C or Swift first?
 
 At the moment, Objective-C. Swift is a fantastic language, however knowing Objective-C will be very valuable for any iOS programmer for at least the next few years. It will likely be a lot quicker to get started with Objective-C than Swift at the moment because most tutorials are written for it.
@@ -157,7 +159,7 @@ If you are targeting multiple platforms or the majority of your app's code is 'b
 
 [fuckingclosuresyntax.com](http://fuckingclosuresyntax.com)
 
-###Why does Foundation classes start with NS?
+###Why do Foundation classes start with NS?
 
 Objective-C doesn't support namespaces, so all classes are prefixed with the framework or developer abbreviation. NS = NextStep, which is the company that Apple bought in the 90s and was used to develop OSX and iOS. For your own classes Apple recommends that you use your own [two or three](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CodingGuidelines/Articles/NamingBasics.html#//apple_ref/doc/uid/20001281-1002226-BBCJECED) letters prefix, especially if you publish the code.
 
@@ -189,7 +191,7 @@ For most developers the answer is probably not. There are three main reasons to 
 
 ###What apps are good for UI design?
 
-Most vector or image editors are OK. [Photoshop](http://www.photoshop.com), [Pixelmator](http://pixelmator.com), [Sketch](http://bohemiancoding.com/sketch/) and [Opacity](http://likethought.com/opacity/) are all great options on the Mac. You may also like to try Facebook's [Origami](http://facebook.github.io/origami/) for interaction design.
+Most vector or image editors are OK. [Sketch](http://bohemiancoding.com/sketch/), [Photoshop](http://www.photoshop.com), [Pixelmator](http://pixelmator.com) and [Opacity](http://likethought.com/opacity/) are all great options on the Mac. You may also like to try Facebook's [Origami](http://facebook.github.io/origami/) for interaction design.
 
 ###Any good design guides or blogs?
 
@@ -293,7 +295,7 @@ Build an awesome app that attracts their attention 😀. You can't pay or bribe 
 
 ###Where should I advertise my app?
 
-Facebook, Twitter, your website, iAd, the web...
+Facebook, Twitter, your website, iAd, the web... Make sure you consider your target audience - there is little point in advertising via Facebook if your app is targeted at children under 13.
 
 ###My app isn't getting many reviews. What can I do?
 
