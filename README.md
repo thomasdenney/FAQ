@@ -37,6 +37,10 @@ You can download Xcode from the [Mac App Store](https://itunes.apple.com/us/app/
 
 Depends what your budget is. Any Mac that can run the latest version of OSX and has more than 4GB of RAM will do. I would recommend Mac Mini or a MacBook Air.
 
+###Is Xcode usable on a MacBook?
+
+Xcode demands a lot of screen space, especially when editing storyboards. It is, however, perfectly usable on a MacBook display. If you've got a retina MacBook Pro you can change the display's resolution so that you get more screen space, which can be very useful when editing storyboards.
+
 ###Do I need an iOS device?
 
 Yes, it's imperative that you test your app on a real device before you submit it to the App Store. Besides, you'll probably want to get a feel for how other iOS apps work before you write one.
