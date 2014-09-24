@@ -47,7 +47,7 @@ Yes, it's imperative that you test your app on a real device before you submit i
 
 ###Which iOS device?
 
-Provided that you can run iOS 8 you will be fine. This includes the iPod Touch 5G, iPhone 4S+ and iPad 2+. Remember, however, that Apple may not support all of these devices for iOS 9. If you're tight on budget then an iPad Mini with Retina Display or an iPod Touch is the best option.
+Provided that you can run iOS 8 you will be fine. This includes the iPod touch 5G, iPhone 4S+ and iPad 2+. Remember, however, that Apple may not support all of these devices for iOS 9. If you're tight on budget then an iPad Mini with Retina Display or an iPod touch is the best option.
 
 ###Do I have to pay $99 for the developer license to get my app on the App Store?
 
