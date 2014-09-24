@@ -169,6 +169,28 @@ If you are targeting multiple platforms or the majority of your app's code is 'b
 
 Objective-C doesn't support namespaces, so all classes are prefixed with the framework or developer abbreviation. NS = NextStep, which is the company that Apple bought in the 90s and was used to develop OSX and iOS. For your own classes Apple recommends that you use your own [two or three](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CodingGuidelines/Articles/NamingBasics.html#//apple_ref/doc/uid/20001281-1002226-BBCJECED) letters prefix, especially if you publish the code.
 
+###What is the difference between `+` and `-` methods in Objective-C?
+
+Methods that begin with a `+` are static class methods and are not tied to a particular instance of a class. For example, you use the following method:
+
+```objc
+//UIView method declaration
++ (void)animateWithDuration:(NSTimeInterval)duration animations:(void(^)(void))animations;
+//Is used as:
+[UIView animateWithDuration:x animations:^{ /* Animations go here */}];
+```
+
+Methods that begin with a `-` are instance methods, and are related to a single instance of a class:
+
+```objc
+//UIView method declaration:
+- (void)addSubview:(UIView*)subview;
+//Is used as:
+[someViewInstance addSubview:someSubview];
+```
+
+The same feature exists in Swift, however the syntax is a little less bizarre. All instance methods just use `func` whereas all static class methods use `class func`.
+
 ##Cloud and Web
 
 ###Should I use iCloud Core Data?
