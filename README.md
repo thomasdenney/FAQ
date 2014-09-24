@@ -171,7 +171,7 @@ Objective-C doesn't support namespaces, so all classes are prefixed with the fra
 
 ###What is the difference between `+` and `-` methods in Objective-C?
 
-Methods that begin with a `+` are static class methods and are not tied to a particular instance of a class. For example, you use the following method:
+Methods that begin with a `+` are static class methods and are not tied to a particular instance of a class. Class methods are used as:
 
 ```objc
 //UIView method declaration
