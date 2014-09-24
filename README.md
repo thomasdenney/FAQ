@@ -125,7 +125,7 @@ Firstly, you need to confirm that you can legally access the data and that the s
 
 ###My UITextView doesn't scroll properly on iOS 7.
 
-Neither does mine. PSPDFKit has a [fix for it though](http://petersteinberger.com/blog/2014/fixing-uitextview-on-ios-7/).
+Neither does mine. PSPDFKit has a [fix for it though](http://petersteinberger.com/blog/2014/fixing-uitextview-on-ios-7/). However, this is now resolved with iOS 8.
 
 ##Language
 
