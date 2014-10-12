@@ -248,26 +248,44 @@ The same feature exists in Swift, however the syntax is a little less bizarre. A
 
 Unlike other object-oriented programming languages Objective-C has a dynamic runtime that you can use to add methods to exsiting classes. This is useful as it allows you to extend the functionality of an existing Cocoa Touch class without the need to subclass it and make sure you use the subclass everywhere.
 
-Xcode provides a template for extensions, but here is a basic implementation:
+Xcode provides a template for extensions, but here is a basic implementation of a map function for `NSArray`:
 
 ```objc
-//NSString+ABC.h
+//NSArray+FAQ.h
 
-@interface NSString (ABC)
+@interface NSArray (FAQ)
 
-- (BOOL)abc_isEmpty;
+/**
+ @param mapper An Objective-C block which maps objects in the original array to objects in the new array
+ @return An array of mapped objects
+*/
+- (NSArray*)faq_map:(id(^)(id))mapper;
 
 @end
 
-//NSString+ABC.m
+//NSArray+FAQ.m
 
-@implementation NSString (ABC)
+@implementation NSArray (FAQ)
 
-- (BOOL)abc_isEmpty {
-    return self.length == 0;
+- (NSArray*)faq_map:(id (^)(id))mapper {
+    NSMutableArray * array = [NSMutableArray arrayWithCapacity:self.count];
+    for (id object in self) {
+        [array addObject:mapper(object)];
+    }
+    return array;
 }
 
 @end
+
+//Usage:
+
+#import "NSArray+FAQ.h"
+
+NSArray * numbers = @[@1, @2, @3, @4];
+NSArray * strings = [numbers faq_map:^id(id object) {
+    return [object stringValue];
+}];
+
 ```
 Apple recommends that if you are writing your own extension methods that you use three letter prefixes (like with class names) so that you avoid clashing with other methods.
 
