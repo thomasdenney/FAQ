@@ -117,6 +117,20 @@ Here's a [great list of stats about iOS versions](http://david-smith.org/iosvers
 
 ###How can I change my apps' font?
 
+You'll need to use [UIAppearance](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAppearance_Protocol/):
+
+```
+//AppDelegate.m
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Override point for customization after application launch.
+    UIFont * avenir = [UIFont fontWithName:@"Avenir" size:[UIFont systemFontSize]];
+    [[UILabel appearance] setFont:avenir];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName: avenir}];
+    //You'll need to do this for other classes that display text
+    return YES;
+}
+```
+
 ###How can I request some JSON from the web?
 
 ```objc
