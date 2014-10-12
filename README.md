@@ -119,7 +119,7 @@ Here's a [great list of stats about iOS versions](http://david-smith.org/iosvers
 
 You'll need to use [UIAppearance](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAppearance_Protocol/):
 
-```
+```objc
 //AppDelegate.m
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
