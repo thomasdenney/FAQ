@@ -191,6 +191,33 @@ Methods that begin with a `-` are instance methods, and are related to a single 
 
 The same feature exists in Swift, however the syntax is a little less bizarre. All instance methods just use `func` whereas all static class methods use `class func`.
 
+###What are extensions?
+
+Unlike other object-oriented programming languages Objective-C has a dynamic runtime that you can use to add methods to exsiting classes. This is useful as it allows you to extend the functionality of an existing Cocoa Touch class without the need to subclass it and make sure you use the subclass everywhere.
+
+Xcode provides a template for extensions, but here is a basic implementation:
+
+```objc
+//NSString+ABC.h
+
+@interface NSString (ABC)
+
+- (BOOL)abc_isEmpty;
+
+@end
+
+//NSString+ABC.m
+
+@implementation NSString (ABC)
+
+- (BOOL)abc_isEmpty {
+    return self.length == 0;
+}
+
+@end
+```
+Apple recommends that if you are writing your own extension methods that you use three letter prefixes (like with class names) so that you avoid clashing with other methods.
+
 ##Cloud and Web
 
 ###Should I use iCloud Core Data?
