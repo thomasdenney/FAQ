@@ -39,7 +39,7 @@ Depends what your budget is. Any Mac that can run the latest version of OS X and
 
 ###Is Xcode usable on a MacBook?
 
-Xcode demands a lot of screen space, especially when editing storyboards. It is, however, perfectly usable on a MacBook display. If you've got a retina MacBook Pro you can change the display's resolution so that you get more screen space, which can be very useful when editing storyboards.
+Xcode demands a lot of screen space, especially when editing storyboards. It is, however, perfectly usable on a MacBook display, even the 11" MacBook Air. If you've got a retina MacBook Pro you can change the display's resolution so that you get more screen space, which can be very useful when editing storyboards.
 
 ###Do I need an iOS device?
 
@@ -109,7 +109,7 @@ No, you can alternatively use XIB files or generate your user interface in code.
 
 ###Do I need to support iOS 6?
 
-No. Currently around 90% of all iOS devices are on iOS 7, and by next spring it will be a similar figure for iOS 8. You'll miss out on using the latest APIs and you'll likely have to write a lot of additional code in order to properly support iOS 6. The only major reason to support versions earlier than iOS 7 is if you are developing for a specific audience (such as schools) that may have older devices (such as the iPad 1).
+No. Currently around 90% of all iOS devices are on iOS 7 or higher, and by Spring 2015 it will likely be a similar figure for iOS 8. You'll miss out on using the latest APIs and you'll likely have to write a lot of additional code in order to properly support iOS 6. The only major reason to support versions earlier than iOS 7 is if you are developing for a specific audience (such as schools) that may have older devices (such as the iPad 1).
 
 Here's a [great list of stats about iOS versions](http://david-smith.org/iosversionstats/).
 
