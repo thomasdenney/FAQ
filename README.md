@@ -35,7 +35,7 @@ You can download Xcode from the [Mac App Store](https://itunes.apple.com/us/app/
 
 ###Which Mac should I get?
 
-Depends what your budget is. Any Mac that can run the latest version of OSX and has more than 4GB of RAM will do. I would recommend Mac Mini or a MacBook Air.
+Depends what your budget is. Any Mac that can run the latest version of OS X and has more than 4GB of RAM will do. I would recommend Mac Mini or a MacBook Air.
 
 ###Is Xcode usable on a MacBook?
 
@@ -65,7 +65,7 @@ Yes. Opacity and Opacity Express are some cheaper alternatives that also export 
 
 ###Should I use AppCode or Xcode?
 
-For most developers, Xcode is a fantastic IDE and the vast majority of iOS and OSX developers use it as their primary IDE. The benefit of Xcode is that it gets all the new features - such as the SpriteKit scene editor, Swift support, etc - straight away, whereas AppCode and other apps take longer to get new features. 
+For most developers, Xcode is a fantastic IDE and the vast majority of iOS and OS X developers use it as their primary IDE. The benefit of Xcode is that it gets all the new features - such as the SpriteKit scene editor, Swift support, etc - straight away, whereas AppCode and other apps take longer to get new features. 
 
 That said, AppCode does offer some fantastic features for code inspection and refactoring that are - in a word - superior to Xcode's. But if you are starting - you are better of with Xcode.
 
@@ -91,8 +91,8 @@ No, you can alternatively use XIB files or generate your user interface in code.
 ###What frameworks should I use for my game?
 
 * [**Unity**](http://unity3d.com) allows you to write cross platform 2/3D games in C# or JavaScript. It provides the vast majority of the tools that you need to get started, and is appropriate for the most iOS games
-* **SpriteKit** is a framework for iOS 7+ and OSX 10.9+ that allows for the development of sprite based 2D games in Xcode. If you aren't bothered about platform lock in and you want to develop a 2D game then this is probably your best bet
-* **SceneKit** has been available since OSX 10.8 and iOS 8. It can integrate with SpriteKit and hugely simplifies the amount of work needed to get 3D graphics on the screen (compared to OpenGL or Metal). If your developing a casual 3D game then SceneKit is a great option
+* **SpriteKit** is a framework for iOS 7+ and OS X 10.9+ that allows for the development of sprite based 2D games in Xcode. If you aren't bothered about platform lock in and you want to develop a 2D game then this is probably your best bet
+* **SceneKit** has been available since OS X 10.8 and iOS 8. It can integrate with SpriteKit and hugely simplifies the amount of work needed to get 3D graphics on the screen (compared to OpenGL or Metal). If your developing a casual 3D game then SceneKit is a great option
 * **OpenGL/Metal** are the low-level APIs available on iOS for 3D graphics. Most developers will not need to use Metal as this is primarily targeted at game engine developers (and requires a lot more work to do basic 3D graphics). OpenGL is now reasonably easy to get started with thanks to GLKit (iOS 5+) but you still have to do a lot of C and manual memory management. For most casual games SpriteKit or SceneKit are better solutions, and for more complex games it will be easier to use a ready made engine like Unity. However, OpenGL is a good way of learning how 3D graphics work
 * **Cocos2D** is a framework similar to SpriteKit (it allows you to develop 2D games in Objective-C) however has the benefit of being cross platform. Cocos2D is a little older in its API style than SpriteKit, however has a wealth of tutorials and documentation available for it
 
@@ -167,7 +167,7 @@ If you are targeting multiple platforms or the majority of your app's code is 'b
 
 ###Why do Foundation classes start with NS?
 
-Objective-C doesn't support namespaces, so all classes are prefixed with the framework or developer abbreviation. NS = NextStep, which is the company that Apple bought in the 90s and was used to develop OSX and iOS. For your own classes Apple recommends that you use your own [two or three](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CodingGuidelines/Articles/NamingBasics.html#//apple_ref/doc/uid/20001281-1002226-BBCJECED) letters prefix, especially if you publish the code.
+Objective-C doesn't support namespaces, so all classes are prefixed with the framework or developer abbreviation. NS = NextStep, which is the company that Apple bought in the 90s and was used to develop OS X and iOS. For your own classes Apple recommends that you use your own [two or three](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CodingGuidelines/Articles/NamingBasics.html#//apple_ref/doc/uid/20001281-1002226-BBCJECED) letters prefix, especially if you publish the code.
 
 ###What is the difference between `+` and `-` methods in Objective-C?
 
@@ -278,7 +278,7 @@ The [Human Interface Guidelines](https://developer.apple.com/library/prerelease/
 
 ###Where can I find great third party code?
 
-[CocoaPods](http://cocoapods.org). CocoaPods is a dependency manager used by Apple developers that makes it really easy to integrate open source code into your iOS or OSX app. Several sites, such as [Cocoa Controls](https://www.cocoacontrols.com/platforms/ios/controls?cocoapods=t) keep track of these. 
+[CocoaPods](http://cocoapods.org). CocoaPods is a dependency manager used by Apple developers that makes it really easy to integrate open source code into your iOS or OS X app. Several sites, such as [Cocoa Controls](https://www.cocoacontrols.com/platforms/ios/controls?cocoapods=t) keep track of these. 
 
 ###Should I use CocoaPods/third party code?
 
