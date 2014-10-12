@@ -327,7 +327,7 @@ The [Human Interface Guidelines](https://developer.apple.com/library/prerelease/
 
 * Justify every pixel of your UI - is a control essential for most people? 
 * Is this interaction obvious? A lot of apps use really interesting combinations of swipes, pinches and taps but make sure that your users will know how to use them.
-* Use AutoLayout and prepare for size classes. Apple wasn't even remotely subtle at WWDC '14 that AutoLayout is designed to work for multiple screen sizes and classes.
+* Use Auto Layout and prepare for size classes. Apple wasn't even remotely subtle at WWDC '14 that Auto Layout is designed to work for multiple screen sizes and classes.
 
 ##Community
 
