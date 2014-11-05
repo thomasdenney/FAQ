@@ -13,7 +13,7 @@ This FAQ originated because I noticed a lot of questions were getting repeated o
 * [Community](#community)
 * [Third party code](#third-party-code)
 * [The App Store](#the-app-store)
-* [Contracting](#contracting)
+* [Contracting and Employment](#contracting-and-employment)
 
 ##Basics
 
@@ -434,7 +434,15 @@ Respect your current users and do not spam them with requests for reviews, as ab
 
 If there is a copyright issue (i.e. they're purporting to be you, or they've literally cloned your apps' entire UI and feature set) you need to go through the [iTunes Content Dispute](http://www.apple.com/legal/internet-services/itunes/appstorenotices/) system.
 
-##Contracting
+##Contracting and Employment
+
+###I'm looking for a job/I want to hire someone. Where should I look?
+
+* [Core Inituition Job Board](http://jobs.coreint.org)
+* [iOS Dev Weekly](http://iosdevweekly.com) lists jobs listings in its mailing list
+* [Stack Overflow Job Board](http://careers.stackoverflow.com/)
+
+**If you've found a job somewhere else that you think should be listed here, pleased add a pull request/issue**
 
 ###I have an amazing idea for an app. Where can I hire a developer?
 
