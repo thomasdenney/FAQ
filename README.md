@@ -57,6 +57,14 @@ Yes.
 
 Yes.
 
+###Where can I find good courses to get me started?
+
+N.B. These are not websites with individual tutorials, but online courses that you work through 'lesson by lesson'. Some of these may also charge money.
+
+* [Developing iOS 7 apps for iPhone and iPad](https://itunes.apple.com/en/course/developing-ios-7-apps-for/id733644550) by Stanford
+* [Complete iOS 8 and Swift course](https://www.udemy.com/complete-ios-developer-course/) by Udemy
+* [iOS tutorials on Lynda](http://www.lynda.com/iOS-training-tutorials/413-0.html)
+
 ##Tools
 
 ###Is PaintCode any good?
