@@ -289,6 +289,10 @@ NSArray * strings = [numbers faq_map:^id(id object) {
 ```
 Apple recommends that if you are writing your own extension methods that you use three letter prefixes (like with class names) so that you avoid clashing with other methods.
 
+###Can I write an app for the Apple Watch in Objective-C?
+
+Yes. Before the Apple Watch a lot of people had suggested online that WatchKit would be Swift only, but it most certainly isn't. You can use Objective-C or Swift to write your Watch app.
+
 ##Cloud and Web
 
 ###Should I use iCloud Core Data?
