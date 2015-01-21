@@ -190,13 +190,19 @@ Neither does mine. PSPDFKit has a [fix for it though](http://petersteinberger.co
 
 ##Language
 
-In general, the programming language you work in is only half of the challenge of learning to build an app. The other, more important half, is the frameworks. Often it is easiest to learn to build an app in Objective-C because the vast majority of documentation, tutorials and support are currently written for Objective-C. Therefore it is often easier to learn the basics with Objective-C before applying them in the language of your choice.
+In general, the programming language you work in is only half of the challenge of learning to build an app. The other, more important half, is the frameworks. Often it is easiest to learn to build an app in Objective-C/Swift because the vast majority of documentation, tutorials and support are currently written for Objective-C/Swift. Therefore it is often easier to learn the basics with Objective-C/Swift before applying them in the language of your choice.
 
 If you're considering a non-Apple language (i.e. not Objective-C or Swift), you probably need to consider that the learning curve will be greater, even if you're already familiar with the language. This is because you will have to learn Cocoa Touch, the framework, as well as the various patterns that it uses. These patterns (delegation, for example) may not be familiar in your language of choice, so you will have to adapt to using them whereas they will come more naturally if you learn them in Objective-C or Swift.
 
 ###Should I learn Objective-C or Swift first?
 
-At the moment, Objective-C. Swift is a fantastic language, however knowing Objective-C will be very valuable for any iOS programmer for at least the next few years. It will likely be a lot quicker to get started with Objective-C than Swift at the moment because most tutorials are written for it.
+TL;DR Swift.
+
+For programmers at any level Swift is easier to learn. The langauge is small, concise and will be familiar to people that have worked in C-like languages before. But you mustn't dismiss Objective-C.
+
+The majority of iOS development tutorials cover using the Cocoa Touch frameworks rather than the language. Everything written pre-June 2014 will be in Objective-C, so any programmer coming to the platform should still be familiar with it.
+
+There is a [summary of common patterns](https://github.com/programmingthomas/equivalent) in both languages to make it easier for beginners to translate between the two.
 
 ###Can I write an iOS app in JavaScript?
 
