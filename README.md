@@ -8,6 +8,7 @@ This FAQ originated because I noticed a lot of questions were getting repeated o
 * [SDK](#sdk)
 * [Common tasks](#common-tasks)
 * [Language](#language)
+  * [Should I learn Objective-C or Swift first?](#should-i-learn-objective-c-or-swift-first)
 * [Cloud and web](#cloud-and-web)
 * [Design](#design)
 * [Community](#community)
