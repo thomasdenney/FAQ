@@ -123,6 +123,10 @@ No. Currently around 90% of all iOS devices are on iOS 7 or higher, and by Sprin
 
 Here's a [great list of stats about iOS versions](http://david-smith.org/iosversionstats/).
 
+###How do I store app settings?
+
+[NSUserDefaults](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSUserDefaults_Class/index.html). This is a really easy to use class. It is trivial to [register default settings](https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSUserDefaults_Class/index.html#//apple_ref/occ/instm/NSUserDefaults/registerDefaults:), adapt your code to [sync via iCloud](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/UserDefaults/StoringPreferenceDatainiCloud/StoringPreferenceDatainiCloud.html), or [subscribe to settings changes](http://stackoverflow.com/a/1141404/871586).
+
 ##Common tasks
 
 ###How can I change my apps' font?
