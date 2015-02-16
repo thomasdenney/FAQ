@@ -353,6 +353,12 @@ The [Human Interface Guidelines](https://developer.apple.com/library/prerelease/
 * Is this interaction obvious? A lot of apps use really interesting combinations of swipes, pinches and taps but make sure that your users will know how to use them.
 * Use Auto Layout and size classes. These make it a lot simpler to handle the 5 different screen sizes (iPhone 3.5", iPhone 4", iPhone 4.7", iPhone 5.5", iPad) than writing your layout code manually
 
+###I heard Interface Builder is evil. How do I do everything in code?
+
+Firstly, IB makes many design tasks much easier (especially when setting up Auto Layout constraints) than writing everything in code. The most common complaints when working with IB are that Storyboards prevent you from reusing common views easily without copy/pasting and they don't place nicely with source control. Generally beginners should start out with Storyboards/XIBs before trying to create everything in code.
+
+If you *really* want to do everything in code, Apple has a [guide here](https://developer.apple.com/library/ios/featuredarticles/ViewControllerPGforiPhoneOS/ViewLoadingandUnloading/ViewLoadingandUnloading.html#//apple_ref/doc/uid/TP40007457-CH10-SW36).
+
 ##Community
 
 ###What developer blogs can I read?
