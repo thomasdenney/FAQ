@@ -133,7 +133,7 @@ Here's a [great list of stats about iOS versions](https://david-smith.org/iosver
 
 ###How do I store app settings?
 
-[NSUserDefaults](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSUserDefaults_Class/index.html). This is a really easy to use class. It is trivial to [register default settings](https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSUserDefaults_Class/index.html#//apple_ref/occ/instm/NSUserDefaults/registerDefaults:), adapt your code to [sync via iCloud](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/UserDefaults/StoringPreferenceDatainiCloud/StoringPreferenceDatainiCloud.html), or [subscribe to settings changes](http://stackoverflow.com/a/1141404/871586).
+[NSUserDefaults](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSUserDefaults_Class/index.html) acts like a persistent dictionary. It is trivial to [register default settings](https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSUserDefaults_Class/index.html#//apple_ref/occ/instm/NSUserDefaults/registerDefaults:), adapt your code to [sync via iCloud](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/UserDefaults/StoringPreferenceDatainiCloud/StoringPreferenceDatainiCloud.html), or [subscribe to settings changes](http://stackoverflow.com/a/1141404/871586).
 
 ##Common tasks
 
@@ -212,9 +212,9 @@ If you're considering a non-Apple language (i.e. not Objective-C or Swift), you 
 
 TL;DR Swift.
 
-For programmers at any level Swift is easier to learn. The langauge is small, concise and will be familiar to people that have worked in C-like languages before. But you mustn't dismiss Objective-C.
+For programmers at any level Swift is easier to learn. The language is small, concise and will be familiar to people that have worked in C-like languages before. But you mustn't dismiss Objective-C.
 
-The majority of iOS development tutorials cover using the Cocoa Touch frameworks rather than the language. Everything written pre-June 2014 will be in Objective-C, so any programmer coming to the platform should still be familiar with it.
+The majority of iOS development tutorials cover using Cocoa Touch frameworks rather than the language. Everything written pre-June 2014 will be in Objective-C, so any programmer coming to the platform should still be familiar with it.
 
 There is a [summary of common patterns](https://github.com/programmingthomas/equivalent) in both languages to make it easier for beginners to translate between the two.
 
