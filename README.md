@@ -349,7 +349,7 @@ For most developers the answer is probably not. There are three main reasons to 
 
 ###What apps are good for UI design?
 
-Most vector or image editors are OK. [Sketch](https://bohemiancoding.com/sketch/), [Photoshop](http://www.photoshop.com), [Pixelmator](http://pixelmator.com) and [Opacity](http://likethought.com/opacity/) are all great options on the Mac. You may also like to try Facebook's [Origami](https://facebook.github.io/origami/) for interaction design.
+Most vector/image editors will work well. [Sketch](https://bohemiancoding.com/sketch/), [Photoshop](http://www.photoshop.com), [Pixelmator](http://pixelmator.com) and [Opacity](http://likethought.com/opacity/) are all great options on OS X. You may also like to try Facebook's [Origami](https://facebook.github.io/origami/) for interaction design.
 
 ###Any good design guides or blogs?
 
