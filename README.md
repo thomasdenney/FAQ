@@ -220,7 +220,7 @@ There is a [summary of common patterns](https://github.com/programmingthomas/equ
 
 ###Can I write an iOS app in JavaScript?
 
-Yes, technologies like [PhoneGap](http://phonegap.com) and [Appcelerator](http://www.appcelerator.com/titanium/) make this pretty easy. If you're coming from a React background, consider [React Native](https://facebook.github.io/react-native/).
+Yes, with [PhoneGap](http://phonegap.com) or [Appcelerator](http://www.appcelerator.com/titanium/). If you're coming from a React background, consider [React Native](https://facebook.github.io/react-native/).
 
 ###Can I write an iOS app in Ruby?
 
@@ -274,7 +274,7 @@ The same feature exists in Swift, however the syntax is a little less bizarre. A
 
 ###What are extensions?
 
-Unlike other object-oriented programming languages Objective-C has a dynamic runtime that you can use to add methods to exsiting classes. This is useful as it allows you to extend the functionality of an existing Cocoa Touch class without the need to subclass it and make sure you use the subclass everywhere.
+Unlike many other object-oriented programming languages Objective-C has a dynamic runtime that you can use to add methods to existing classes. This reduces the need for subclassing, so can simplify your class hierarchies.
 
 Xcode provides a template for extensions, but here is a basic implementation of a map function for `NSArray`:
 
@@ -319,17 +319,17 @@ Apple recommends that if you are writing your own extension methods that you use
 
 ###Can I write an app for the Apple Watch in Objective-C?
 
-Yes. Before the Apple Watch a lot of people had suggested online that WatchKit would be Swift only, but it most certainly isn't. You can use Objective-C or Swift to write your Watch app.
+Yes. Before WatchKit was launched it was rumoured that it was Swift only, but to date (August 2015) all Apple frameworks work in Objective-C.
 
 ##Cloud and Web
 
 ###Should I use iCloud Core Data?
 
-A few years ago the answer was absolutely not. Since iOS 7 Apple has hugely improved the quality of the APIs used for syncing data. If you have a simple data model that isn't going to get shared between users that you want to sync between devices then Core Data is a very good choice. [objc.io has a great guide to get you started](http://www.objc.io/issue-10/icloud-core-data.html).
+A few years ago the answer was absolutely not. Since iOS 7 Apple has made the API more stable and reliable. If you have a simple data model you want to sync between devices then Core Data is a good choice. [objc.io has a great guide to get you started](http://www.objc.io/issue-10/icloud-core-data.html).
 
 ###Should I use CloudKit?
 
-CloudKit is a bit different to iCloud Core Data. The benefits of CloudKit is that you get access to a NoSQL-style database, binary data storage and the ability to share data between users. Another very cool feature is that it can send notifications *automatically* to users based on the results of data queries that run in the cloud. In order to use CloudKit your user will have to a web connection because nothing is cached locally.
+CloudKit operates differently iCloud Core Data. The benefits of CloudKit are that you get access to a NoSQL-style database, binary data storage, and the ability to share data between users. Additionally CloudKit can send notifications to users based on the results of data queries that run in the cloud. In order to use CloudKit your user will need an Internet connection because data isn't stored locally.
 
 ###Should I use Parse?
 
