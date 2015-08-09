@@ -339,9 +339,9 @@ If you're targeting multiple platforms and you need to share data between device
 
 For most developers the answer is probably not. There are three main reasons to run your own servers:
 
-* You need something more than a 'dumb cloud' (i.e. you need something other than the client to manipulate your data)
-* You are likely to grow to an enormous Instagram-like scale
-* You are experienced in managing servers and it would be cheaper for you to go with [AWS](https://aws.amazon.com)/[Heroku](http://heroku.com)/[DigitalOcean](http://digitalocean.com)/[Linode](https://www.linode.com) than some other service
+* You need to manipulate the data in the cloud rather than on devices only
+* You want to minimise the cost of scaling through controlling as much of the stack as possible
+* You are experienced in managing servers
 
 **Be warned:** running your own servers is a lot of work, and you probably don't need to if you are working on your first cloud-based app.
 
