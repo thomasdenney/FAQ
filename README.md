@@ -97,6 +97,7 @@ The iOS SDK includes:
 * **Core Data**. A framework that provides a generalised way of storing your object graph in SQLite or XML files. For a lot of  apps this is the good solution because you are able to take advantage of `NSFetchedResultsController` to make your table/collection views really slick and update automatically. Unlike other technologies Core Data has a very strict [concurrency model](https://developer.apple.com/library/prerelease/ios/documentation/Cocoa/Conceptual/CoreData/Concurrency.html), which you must know about before you get started, as it can cause issues down the line.
 * **NSUserDefaults**. Don't store your object graph in NSUserDefaults, as this is a simple key-value store that is great for storing settings. Do not store sensitive data such as credentials, OAuth tokens or in-app purchase receipts on NSUserDefaults - use [Keychain](https://developer.apple.com/library/ios/documentation/Security/Conceptual/keychainServConcepts/02concepts/concepts.html) for this instead.
 * **SQLite**. Core Data is based on SQLite, which is the most common database used in iOS apps. SQLite offers superb performance, has very low memory usage, and is well supported. It has a C based API, so please read the comments below on third-party wrappers
+* **CloudKit**. Available for iOS 8+ and OS X 10.10+, CloudKit stores user's data in iCloud either publicly or privately. A JavaScript API also exists for it, which allows you to build a web app that partners with your iOS app
 
 Third party options
 
