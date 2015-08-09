@@ -470,7 +470,7 @@ Respect your current users and do not spam them with requests for reviews, as ab
 
 ###What can I do if somebody copies my app?
 
-If there is a copyright issue (i.e. they're purporting to be you, or they've literally cloned your apps' entire UI and feature set) you need to go through the [iTunes Content Dispute](http://www.apple.com/legal/internet-services/itunes/appstorenotices/) system.
+If there is a copyright issue (i.e. they're purporting to be you, or they've literally cloned your app's entire UI and feature set) you need to go through the [iTunes Content Dispute](http://www.apple.com/legal/internet-services/itunes/appstorenotices/) system.
 
 ##Contracting and Employment
 
