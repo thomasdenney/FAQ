@@ -71,7 +71,7 @@ N.B. These are not websites with individual tutorials, but online courses that y
 
 ###Is PaintCode any good?
 
-Yes. Opacity and Opacity Express are some cheaper alternatives that also export Objective-C rendering code, and the vector editor in Opacity is a little better for some tasks. However, only use PaintCode if it is going to save you time and resources - if you aren't using much beyond the default iOS icons or you don't have dynamic graphics you probably don't need it.
+Yes - its great! Opacity and Opacity Express are cheaper alternatives that also export Objective-C rendering code, and I find the vector editor in Opacity is better. However, only use PaintCode if it is going to save you time and resources - if you aren't using much beyond the default iOS icons or you don't have dynamic graphics you probably don't need it.
 
 ###Should I use AppCode or Xcode?
 
