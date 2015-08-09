@@ -32,11 +32,11 @@ Irrespective of what you use to write your app, you will still need Xcode on a M
 
 ###Where can I get the developer tools?
 
-You can download Xcode from the [Mac App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12). You can also download the [Xcode 6 beta](https://developer.apple.com/swift/resources/) if you're a registered developer (you don't need to be a paid member).
+You can download Xcode from the [Mac App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12). You can also download the [Xcode betas](https://developer.apple.com/xcode/downloads/) if you're a registered developer (you don't need to be a paid member).
 
 ###Which Mac should I get?
 
-Depends what your budget is. Any Mac that can run the latest version of OS X and has more than 4GB of RAM will do. I would recommend Mac Mini or a MacBook Air.
+Depends what your budget is. Any Mac that can run the latest version of OS X and has more than 4GB of RAM will do. A Mac mini or MacBook Air will suffice.
 
 ###Is Xcode usable on a MacBook?
 
