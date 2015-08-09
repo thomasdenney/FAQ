@@ -422,8 +422,8 @@ The answer for most people is yes. The vast majority of CocoaPods are licensed u
 
 ###Any great CocoaPods that I should know about?
 
-* [AFNetworking](http://github.com/AFNetworking/AFNetworking) - library that handles all your networking needs
-* [FMDB](http://github.com/ccgus/fmdb) - Objective-C wrapper for SQLite
+* [AFNetworking](https://github.com/AFNetworking/AFNetworking) - library that handles all your networking needs
+* [FMDB](https://github.com/ccgus/fmdb) - Objective-C wrapper for SQLite
 * [GSKeychain](https://github.com/goosoftware/GSKeychain) - very simple interface for handling keychain operations
 * [MagicalRecord](https://github.com/magicalpanda/MagicalRecord) - easier Core Data
 * [Pop](https://github.com/facebook/pop) - dynamic and interactive animation library
