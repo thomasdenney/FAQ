@@ -75,9 +75,7 @@ Yes - its great! Opacity and Opacity Express are cheaper alternatives that also 
 
 ###Should I use AppCode or Xcode?
 
-For most developers, Xcode is a fantastic IDE and the vast majority of iOS and OS X developers use it as their primary IDE. The benefit of Xcode is that it gets all the new features - such as the SpriteKit scene editor, Swift support, etc - straight away, whereas AppCode and other apps take longer to get new features. 
-
-That said, AppCode does offer some fantastic features for code inspection and refactoring that are - in a word - superior to Xcode's. But if you are starting - you are better of with Xcode.
+Start out with Xcode, even if you've used JetBrains products before. Xcode contains all the tools you need to build an iOS app, but AppCode contains a lot of great extra features. For example, if you need strong refactoring support then you should give AppCode a go.
 
 ##SDK
 
