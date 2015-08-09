@@ -230,11 +230,11 @@ If you are targeting multiple platforms or the majority of your app's code is 'b
 
 ###Is there an easy reference for Objective-C block syntax?
 
-[fuckingblocksyntax.com](http://fuckingblocksyntax.com)
+<http://fuckingblocksyntax.com> or <http://goshdarnblocksyntax.com>.
 
 ###Is there an easy reference for Swift closure syntax?
 
-[fuckingclosuresyntax.com](http://fuckingclosuresyntax.com)
+<http://fuckingclosuresyntax.com> or <http://goshdarnclosuresyntax.com>.
 
 ###Why do Foundation classes start with NS?
 
