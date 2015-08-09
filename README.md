@@ -91,10 +91,16 @@ No, you can alternatively use XIB files or generate your user interface in code.
 
 ###What should I use to store my app's data?
 
+The iOS SDK includes:
+
 * **Plist files**. If you are storing small amounts of non-complex data structures use plist files. Array and dictionary collection classes as well as NSData support writing to files with a single line of code.
 * **Core Data**. A framework that provides a generalised way of storing your object graph in SQLite or XML files. For a lot of  apps this is the good solution because you are able to take advantage of `NSFetchedResultsController` to make your table/collection views really slick and update automatically. Unlike other technologies Core Data has a very strict [concurrency model](https://developer.apple.com/library/prerelease/ios/documentation/Cocoa/Conceptual/CoreData/Concurrency.html), which you must know about before you get started, as it can cause issues down the line.
-* **FMDB/SQLite**. If you aren't going to directly use Core Data then using SQLite is your next best bet. If you're on iOS, the best way to interact with SQLite is through [FMDB](https://github.com/ccgus/fmdb). Instead of letting Core Data manage your model objects you can create your own model objects from the results of SQL queries. This means that you can use your own concurrency model (although FMDatabaseQueue is a super easy solution to thread safety). If you're interested in something somewhere between FMDB and Core Data you might want to try Marco Arment's [FCModel](https://github.com/marcoarment/FCModel), which is based off of Brent Simmons' description of [how he uses FMDB](http://www.objc.io/issue-4/SQLite-instead-of-core-data.html).
 * **NSUserDefaults**. Don't store your object graph in NSUserDefaults, as this is a simple key-value store that is great for storing settings. Do not store sensitive data such as credentials, OAuth tokens or in-app purchase receipts on NSUserDefaults - use [Keychain](https://developer.apple.com/library/ios/documentation/Security/Conceptual/keychainServConcepts/02concepts/concepts.html) for this instead.
+* **SQLite**. Core Data is based on SQLite, which is the most common database used in iOS apps. SQLite offers superb performance, has very low memory usage, and is well supported. It has a C based API, so please read the comments below on third-party wrappers
+
+Third party options
+
+* **[FMDB](https://github.com/ccgus/fmdb)**. A SQLite wrapper that works with both Objective-C and SQLite. Instead of letting Core Data manage your model objects you can create your own model objects from the results of SQL queries. This means that you can use your own concurrency model (although FMDatabaseQueue is a super easy solution to thread safety). If you're interested in something somewhere between FMDB and Core Data you might want to try Marco Arment's [FCModel](https://github.com/marcoarment/FCModel), which is based off of Brent Simmons' description of [how he uses FMDB](http://www.objc.io/issue-4/SQLite-instead-of-core-data.html).
 * **[Realm](https://realm.io)** is a 'mobile first database' and aims to reduce the workload of the developer. It fully supports concurrency and in some cases may offer better performance than SQLite based frameworks
 
 ###What frameworks should I use for my game?
