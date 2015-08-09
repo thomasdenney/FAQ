@@ -79,7 +79,7 @@ Start out with Xcode, even if you've used JetBrains products before. Xcode conta
 
 ##SDK
 
-###Where can I find some great examples of Objective-C code?
+###Where can I find some great examples of Objective-C/Swift code?
 
 * [NSHipster](http://nshipster.com)
 * [objc.io](http://objc.io)
