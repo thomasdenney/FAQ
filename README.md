@@ -107,9 +107,10 @@ Third party options
 
 ###What frameworks should I use for my game?
 
-* **[Unity](https://unity3d.com)** allows you to write cross platform 2/3D games in C# or JavaScript. It provides the vast majority of the tools that you need to get started, and is appropriate for the most iOS games
+* **[Unity](https://unity3d.com)** allows you to write cross platform 2/3D games in C# or JavaScript. It provides the vast majority of the tools that you need to get started, and is appropriate for most iOS games
+* **[Unreal Engine](https://www.unrealengine.com/what-is-unreal-engine-4)** offers a free alternative to Unity, but you have to pay a 5% royalty fee. Like Unity you can port your games to a variety of platforms
 * **SpriteKit** is a framework for iOS 7+ and OS X 10.9+ that allows for the development of sprite based 2D games in Xcode. If you aren't bothered about platform lock in and you want to develop a 2D game then this is probably your best bet
-* **SceneKit** has been available since OS X 10.8 and iOS 8. It can integrate with SpriteKit and hugely simplifies the amount of work needed to get 3D graphics on the screen (compared to OpenGL or Metal). If your developing a casual 3D game then SceneKit is a great option
+* **SceneKit** is in OS X 10.8+ and iOS 8+. It can integrate with SpriteKit and hugely simplifies the amount of work needed to get 3D graphics on the screen (compared to OpenGL or Metal). If your developing a casual 3D game then SceneKit is a great option
 * **OpenGL/Metal** are the low-level APIs available on iOS for 3D graphics. Most developers will not need to use Metal as this is primarily targeted at game engine developers (and requires a lot more work to do basic 3D graphics). OpenGL is now reasonably easy to get started with thanks to GLKit (iOS 5+) but you still have to do a lot of C and manual memory management. For most casual games SpriteKit or SceneKit are better solutions, and for more complex games it will be easier to use a ready made engine like Unity. However, OpenGL is a good way of learning how 3D graphics work
 * **Cocos2D** is a framework similar to SpriteKit (it allows you to develop 2D games in Objective-C) however has the benefit of being cross platform. Cocos2D is a little older in its API style than SpriteKit, however has a wealth of tutorials and documentation available for it
 
