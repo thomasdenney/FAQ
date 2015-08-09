@@ -333,7 +333,7 @@ CloudKit operates differently iCloud Core Data. The benefits of CloudKit are tha
 
 ###Should I use Parse?
 
-Parse has proven to be a very popular technology owned by Facebook. Its advantages over CloudKit is that it is multi-platform (Android support too) and supports earlier versions of iOS. However, CloudKit has the advantage that identity is automatic (linked with the users' iCloud account) and it is cheaper.
+If you're targeting multiple platforms and you need to share data between devices, Parse will be better than CloudKit. CloudKit has its advantages though; authentication is automatic on iOS devices and Apple has a more generous pricing model.
 
 ###Should I run my own servers/VPS?
 
