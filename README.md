@@ -219,7 +219,7 @@ There is a [summary of common patterns](https://github.com/programmingthomas/equ
 
 ###Can I write an iOS app in JavaScript?
 
-Yes, technologies like [PhoneGap](http://phonegap.com) and [Appcelerator](http://www.appcelerator.com/titanium/) make this pretty easy.
+Yes, technologies like [PhoneGap](http://phonegap.com) and [Appcelerator](http://www.appcelerator.com/titanium/) make this pretty easy. If you're coming from a React background, consider [React Native](https://facebook.github.io/react-native/).
 
 ###Can I write an iOS app in Ruby?
 
