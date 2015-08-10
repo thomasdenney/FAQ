@@ -22,7 +22,7 @@ Table Of Contents
 
 ##Basics
 
-The most valuable source of information available to iOS Developers is [Apple's Developer Library](https://developer.apple.com/library/ios/navigation/). This contains thousands of documents explaining every single function in the SDK, hundreds of sample applications and several years of WWDC videos. If you've got a problem, this should always be the first place that you should look. 
+The most valuable source of information available to iOS Developers is [Apple's Developer Library](https://developer.apple.com/library/ios/navigation/). This contains thousands of documents explaining every single function in the SDK, hundreds of sample applications and several years of WWDC videos. If you've got a problem, this should always be the first place that you should look.
 
 ##Prerequisites
 
@@ -356,7 +356,7 @@ The [Human Interface Guidelines](https://developer.apple.com/library/prerelease/
 
 ###Any tips for good design?
 
-* Justify every pixel of your UI - is a control essential for most people? 
+* Justify every pixel of your UI - is a control essential for most people?
 * Is this interaction obvious? A lot of apps use really interesting combinations of swipes, pinches and taps but make sure that your users will know how to use them.
 * Use Auto Layout and size classes. These make it a lot simpler to handle the 5 different screen sizes (iPhone 3.5", iPhone 4", iPhone 4.7", iPhone 5.5", iPad) than writing your layout code manually
 
@@ -413,7 +413,7 @@ If you *really* want to do everything in code, Apple has a [guide here](https://
 
 ###Where can I find great third party code?
 
-[CocoaPods](http://cocoapods.org). CocoaPods is a dependency manager used by Apple developers that makes it really easy to integrate open source code into your iOS or OS X app. Several sites, such as [Cocoa Controls](https://www.cocoacontrols.com/platforms/ios/controls?cocoapods=t) keep track of these. 
+[CocoaPods](http://cocoapods.org). CocoaPods is a dependency manager used by Apple developers that makes it really easy to integrate open source code into your iOS or OS X app. Several sites, such as [Cocoa Controls](https://www.cocoacontrols.com/platforms/ios/controls?cocoapods=t) keep track of these.
 
 ###Should I use CocoaPods/third party code?
 
