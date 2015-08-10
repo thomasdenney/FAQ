@@ -1,20 +1,24 @@
 #iOS Programming FAQ
 
-This FAQ originated because I noticed a lot of questions were getting repeated on [/r/iosprogramming](https://reddit.com/r/iosprogramming) so I've decided to write short and sweet answers to all the common questions here. This is a curated list, and I am actively looking for contributions for both questions and answers, so please submit pull requests.
+This FAQ has been forked from [this repository](https://github.com/programmingthomas/FAQ). So giving the credit where credit is due - thanks u/ProgrammingThomas!
 
-* [Basics](#basics)
-* [Prerequisites](#prerequisites)
-* [Tools](#tools)
-* [SDK](#sdk)
-* [Common tasks](#common-tasks)
-* [Language](#language)
-  * [Should I learn Objective-C or Swift first?](#should-i-learn-objective-c-or-swift-first)
-* [Cloud and web](#cloud-and-web)
-* [Design](#design)
-* [Community](#community)
-* [Third party code](#third-party-code)
-* [The App Store](#the-app-store)
-* [Contracting and Employment](#contracting-and-employment)
+This FAQ should receive occasional updates from [its own repository](https://github.com/riosprogramming/FAQ). So feel free to create pull requests to update/expand this FAQ.
+
+Table Of Contents
+
+* Basics
+* Prerequisites
+* Tools
+* SDK
+* Common tasks
+* Language
+  * Should I learn Objective-C or Swift first?
+* Cloud and web
+* Design
+* Community
+* Third party code
+* The App Store
+* Contracting and Employment
 
 ##Basics
 
