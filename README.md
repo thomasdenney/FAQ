@@ -1,24 +1,28 @@
 #iOS Programming FAQ
 
-This FAQ originated because I noticed a lot of questions were getting repeated on [/r/iosprogramming](https://reddit.com/r/iosprogramming) so I've decided to write short and sweet answers to all the common questions here. This is a curated list, and I am actively looking for contributions for both questions and answers, so please submit pull requests.
+This FAQ has been forked from [this repository](https://github.com/programmingthomas/FAQ). So giving the credit where credit is due - thanks u/ProgrammingThomas!
 
-* [Basics](#basics)
-* [Prerequisites](#prerequisites)
-* [Tools](#tools)
-* [SDK](#sdk)
-* [Common tasks](#common-tasks)
-* [Language](#language)
-  * [Should I learn Objective-C or Swift first?](#should-i-learn-objective-c-or-swift-first)
-* [Cloud and web](#cloud-and-web)
-* [Design](#design)
-* [Community](#community)
-* [Third party code](#third-party-code)
-* [The App Store](#the-app-store)
-* [Contracting and Employment](#contracting-and-employment)
+This FAQ should receive occasional updates from [its own repository](https://github.com/riosprogramming/FAQ). So feel free to create pull requests to update/expand this FAQ.
+
+Table Of Contents
+
+* Basics
+* Prerequisites
+* Tools
+* SDK
+* Common tasks
+* Language
+  * Should I learn Objective-C or Swift first?
+* Cloud and web
+* Design
+* Community
+* Third party code
+* The App Store
+* Contracting and Employment
 
 ##Basics
 
-The most valuable source of information available to iOS Developers is [Apple's Developer Library](https://developer.apple.com/library/ios/navigation/). This contains thousands of documents explaining every single function in the SDK, hundreds of sample applications and several years of WWDC videos. If you've got a problem, this should always be the first place that you should look. 
+The most valuable source of information available to iOS Developers is [Apple's Developer Library](https://developer.apple.com/library/ios/navigation/). This contains thousands of documents explaining every single function in the SDK, hundreds of sample applications and several years of WWDC videos. If you've got a problem, this should always be the first place that you should look.
 
 ##Prerequisites
 
@@ -141,58 +145,56 @@ Here's a [great list of stats about iOS versions](https://david-smith.org/iosver
 
 You'll need to use [UIAppearance](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAppearance_Protocol/):
 
-```objc
-//AppDelegate.m
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    UIFont * avenir = [UIFont fontWithName:@"Avenir" size:[UIFont systemFontSize]];
-    [[UILabel appearance] setFont:avenir];
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName: avenir}];
-    //You'll need to do this for other classes that display text
-    return YES;
-}
-```
+
+    // AppDelegate.m
+    - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+        // Override point for customization after application launch.
+        UIFont * avenir = [UIFont fontWithName:@"Avenir" size:[UIFont systemFontSize]];
+        [[UILabel appearance] setFont:avenir];
+        [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName: avenir}];
+        //You'll need to do this for other classes that display text
+        return YES;
+    }
 
 ###How can I request some JSON from the web?
 
-```objc
-//Standard library JSON request to http://httpbin.org
 
-NSURLSession * session = [NSURLSession sharedSession];
+    //Standard library JSON request to http://httpbin.org
 
-//Prepare the request
-NSURL * url = [NSURL URLWithString:@"http://httpbin.org/get"];
-NSURLRequest * request = [NSURLRequest requestWithURL:url];
+    NSURLSession * session = [NSURLSession sharedSession];
 
-//Prepare the data task
-NSURLSessionDataTask * dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-    //This block will be executed on the main thread once the data task has completed
-    //Status Code is HTTP 200 OK
-    //You have to cast to NSHTTPURLResponse, a subclass of NSURLResponse, to get the status code
-    if ([(NSHTTPURLResponse*)response statusCode] == 200) {
-        NSDictionary * json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        NSLog(@"%@", json);
-        //The JSON is parsed into standard Cocoa classes such as NSArray, NSDictionary, NSString and NSNumber:
-        NSLog(@"The requested URL was %@", json[@"url"]);
-    }
-}];
+    //Prepare the request
+    NSURL * url = [NSURL URLWithString:@"http://httpbin.org/get"];
+    NSURLRequest * request = [NSURLRequest requestWithURL:url];
 
-//Begin the task
-[dataTask resume];
-```
+    //Prepare the data task
+    NSURLSessionDataTask * dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        //This block will be executed on the main thread once the data task has completed
+        //Status Code is HTTP 200 OK
+        //You have to cast to NSHTTPURLResponse, a subclass of NSURLResponse, to get the status code
+        if ([(NSHTTPURLResponse*)response statusCode] == 200) {
+            NSDictionary * json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            NSLog(@"%@", json);
+            //The JSON is parsed into standard Cocoa classes such as NSArray, NSDictionary, NSString and NSNumber:
+            NSLog(@"The requested URL was %@", json[@"url"]);
+        }
+    }];
+
+    //Begin the task
+    [dataTask resume];
 
 `NSURLSession` was introduced in iOS 7 and OS X Mavericks. It provides a reasonably easy way to do concurrent network requests, however you may wish to use [AFNetworking](https://github.com/AFNetworking/AFNetworking) instead as this can reduce the amount of code you have to write:
 
-```objc
-AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-[manager GET:@"http://httpbin.org/get" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-    //Response object is an NSDictionary, like in the previous example
-    NSLog(@"JSON: %@", responseObject);
-} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-    //Handle the error case
-    NSLog(@"Error: %@", error);
-}];
-```
+
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:@"http://httpbin.org/get" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        // Response object is an NSDictionary, like in the previous example
+        NSLog(@"JSON: %@", responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        //Handle the error case
+        NSLog(@"Error: %@", error);
+    }];
+
 
 ###I want to build a client app for web service X. How do I get started?
 
@@ -254,21 +256,19 @@ Objective-C doesn't support namespaces, so all classes are prefixed with the fra
 
 Methods that begin with a `+` are static class methods and are not tied to a particular instance of a class. Class methods are used as:
 
-```objc
-//UIView method declaration
-+ (void)animateWithDuration:(NSTimeInterval)duration animations:(void(^)(void))animations;
-//Is used as:
-[UIView animateWithDuration:x animations:^{ /* Animations go here */}];
-```
+
+    // UIView method declaration
+    + (void)animateWithDuration:(NSTimeInterval)duration animations:(void(^)(void))animations;
+    // Is used as:
+    [UIView animateWithDuration:x animations:^{ /* Animations go here */}];
 
 Methods that begin with a `-` are instance methods, and are related to a single instance of a class:
 
-```objc
-//UIView method declaration:
-- (void)addSubview:(UIView*)subview;
-//Is used as:
-[someViewInstance addSubview:someSubview];
-```
+
+    // UIView method declaration:
+    - (void)addSubview:(UIView*)subview;
+    // Is used as:
+    [someViewInstance addSubview:someSubview];
 
 The same feature exists in Swift, however the syntax is a little less bizarre. All instance methods just use `func` whereas all static class methods use `class func`.
 
@@ -278,43 +278,42 @@ Unlike many other object-oriented programming languages Objective-C has a dynami
 
 Xcode provides a template for extensions, but here is a basic implementation of a map function for `NSArray`:
 
-```objc
-//NSArray+FAQ.h
 
-@interface NSArray (FAQ)
+    // NSArray+FAQ.h
 
-/**
- @param mapper An Objective-C block which maps objects in the original array to objects in the new array
- @return An array of mapped objects
-*/
-- (NSArray*)faq_map:(id(^)(id))mapper;
+    @interface NSArray (FAQ)
 
-@end
+    /**
+     @param mapper An Objective-C block which maps objects in the original array to objects in the new array
+     @return An array of mapped objects
+    */
+    - (NSArray*)faq_map:(id(^)(id))mapper;
 
-//NSArray+FAQ.m
+    @end
 
-@implementation NSArray (FAQ)
+    // NSArray+FAQ.m
 
-- (NSArray*)faq_map:(id (^)(id))mapper {
-    NSMutableArray * array = [NSMutableArray arrayWithCapacity:self.count];
-    for (id object in self) {
-        [array addObject:mapper(object)];
+    @implementation NSArray (FAQ)
+
+    - (NSArray*)faq_map:(id (^)(id))mapper {
+        NSMutableArray * array = [NSMutableArray arrayWithCapacity:self.count];
+        for (id object in self) {
+            [array addObject:mapper(object)];
+        }
+        return array;
     }
-    return array;
-}
 
-@end
+    @end
 
-//Usage:
+    //Usage:
 
-#import "NSArray+FAQ.h"
+    #import "NSArray+FAQ.h"
 
-NSArray * numbers = @[@1, @2, @3, @4];
-NSArray * strings = [numbers faq_map:^id(id object) {
-    return [object stringValue];
-}];
+    NSArray * numbers = @[@1, @2, @3, @4];
+    NSArray * strings = [numbers faq_map:^id(id object) {
+        return [object stringValue];
+    }];
 
-```
 Apple recommends that if you are writing your own extension methods that you use three letter prefixes (like with class names) so that you avoid clashing with other methods.
 
 ###Can I write an app for the Apple Watch in Objective-C?
@@ -357,7 +356,7 @@ The [Human Interface Guidelines](https://developer.apple.com/library/prerelease/
 
 ###Any tips for good design?
 
-* Justify every pixel of your UI - is a control essential for most people? 
+* Justify every pixel of your UI - is a control essential for most people?
 * Is this interaction obvious? A lot of apps use really interesting combinations of swipes, pinches and taps but make sure that your users will know how to use them.
 * Use Auto Layout and size classes. These make it a lot simpler to handle the 5 different screen sizes (iPhone 3.5", iPhone 4", iPhone 4.7", iPhone 5.5", iPad) than writing your layout code manually
 
@@ -414,7 +413,7 @@ If you *really* want to do everything in code, Apple has a [guide here](https://
 
 ###Where can I find great third party code?
 
-[CocoaPods](http://cocoapods.org). CocoaPods is a dependency manager used by Apple developers that makes it really easy to integrate open source code into your iOS or OS X app. Several sites, such as [Cocoa Controls](https://www.cocoacontrols.com/platforms/ios/controls?cocoapods=t) keep track of these. 
+[CocoaPods](http://cocoapods.org). CocoaPods is a dependency manager used by Apple developers that makes it really easy to integrate open source code into your iOS or OS X app. Several sites, such as [Cocoa Controls](https://www.cocoacontrols.com/platforms/ios/controls?cocoapods=t) keep track of these.
 
 ###Should I use CocoaPods/third party code?
 
@@ -479,9 +478,3 @@ If there is a copyright issue (i.e. they're purporting to be you, or they've lit
 * [Core Inituition Job Board](http://jobs.coreint.org)
 * [iOS Dev Weekly](http://iosdevweekly.com) lists jobs listings in its mailing list
 * [Stack Overflow Job Board](http://careers.stackoverflow.com/)
-
-**If you've found a job somewhere else that you think should be listed here, pleased add a pull request/issue**
-
-###I have an amazing idea for an app. Where can I hire a developer?
-
-###I've written a great app but I don't do design. Where can I hire a designer?
