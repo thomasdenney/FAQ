@@ -1,5 +1,8 @@
 #iOS Programming FAQ
 
+**We've moved! Please check out the [*official* FAQ in this new
+repository](https://github.com/riosprogramming/FAQ)**
+
 This FAQ originated because I noticed a lot of questions were getting repeated on [/r/iosprogramming](https://reddit.com/r/iosprogramming) so I've decided to write short and sweet answers to all the common questions here. This is a curated list, and I am actively looking for contributions for both questions and answers, so please submit pull requests.
 
 * [Basics](#basics)
