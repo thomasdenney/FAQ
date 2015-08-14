@@ -4,22 +4,6 @@ This FAQ has been forked from [this repository](https://github.com/programmingth
 
 This FAQ should receive occasional updates from [its own repository](https://github.com/riosprogramming/FAQ). So feel free to create pull requests to update/expand this FAQ.
 
-Table Of Contents
-
-* Basics
-* Prerequisites
-* Tools
-* SDK
-* Common tasks
-* Language
-  * Should I learn Objective-C or Swift first?
-* Cloud and web
-* Design
-* Community
-* Third party code
-* The App Store
-* Contracting and Employment
-
 ##Basics
 
 The most valuable source of information available to iOS Developers is [Apple's Developer Library](https://developer.apple.com/library/ios/navigation/). This contains thousands of documents explaining every single function in the SDK, hundreds of sample applications and several years of WWDC videos. If you've got a problem, this should always be the first place that you should look.
