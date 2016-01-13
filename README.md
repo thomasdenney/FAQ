@@ -113,9 +113,9 @@ Third party options
 * [Big Nerd Ranch](https://www.bignerdranch.com)
 * [/r/iosprogramming](https://reddit.com/r/iosprogramming)
 
-###Do I need to support iOS 6?
+###Do I need to support iOS version X?
 
-No. Currently around 90% of all iOS devices are on iOS 7 or higher, and by Spring 2015 it will likely be a similar figure for iOS 8. You'll miss out on using the latest APIs and you'll likely have to write a lot of additional code in order to properly support iOS 6. The only major reason to support versions earlier than iOS 7 is if you are developing for a specific audience (such as schools) that may have older devices (such as the iPad 1).
+Apple's recommended way of support for iOS is current and previous versions. So at any given time you should target at most two major iOS versions.
 
 Here's a [great list of stats about iOS versions](https://david-smith.org/iosversionstats/).
 
